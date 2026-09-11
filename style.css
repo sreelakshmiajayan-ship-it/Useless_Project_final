@@ -1,0 +1,21 @@
+/* Basic layout and HUD */
+html,body{height:100%;margin:0;font-family:Inter, system-ui, Arial, sans-serif;background:#111;color:#fff}
+#game-container{display:flex;justify-content:center;align-items:flex-start;padding:20px}
+canvas{background:#000;border:2px solid #333;display:block}
+#hud{position:absolute;top:12px;left:18px;display:flex;gap:16px;font-weight:600}
+#hud > div{background:rgba(0,0,0,0.4);padding:6px 10px;border-radius:6px}
+.center-screen{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center}
+.menu{background:rgba(0,0,0,0.6);padding:18px;border-radius:8px}
+.btn{display:inline-block;margin-top:12px;padding:10px 16px;background:#1e90ff;color:#fff;border-radius:6px;cursor:pointer}
+.muted{opacity:0.9}
+
+/* Responsive tweak */
+@media (max-width:840px){canvas{width:100%;height:auto}}
+
+/* Progress bar and stats */
+#progress-wrap{display:flex;flex-direction:column;align-items:flex-start;background:rgba(0,0,0,0.35);padding:6px;border-radius:6px}
+#progress{width:180px;height:12px;background:#222;border-radius:6px;margin-top:6px;overflow:hidden}
+#progress-bar{height:100%;background:linear-gradient(90deg,#32d74b,#ffd166);width:0%}
+#progress-label{font-size:12px;opacity:0.9}
+
+/* Screen shake helper (canvas transform will handle) */
